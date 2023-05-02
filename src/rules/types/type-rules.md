@@ -11,6 +11,7 @@ invokeAnything(1);
 ```
 
 aaaac
+123
 
 - use is operator
 - use satisfies operator
