@@ -85,7 +85,7 @@ const SidebarMenu = ({ menu, isPin, expandedMenu, setExpandedMenu }: Props) => {
           <ListItemButton
             sx={{
               mx: '5px',
-              py: '6px',
+              height: '40px',
               borderRadius: theme.shape,
               color: theme.palette.grey[300],
               '&:hover': {
@@ -115,7 +115,7 @@ const SidebarMenu = ({ menu, isPin, expandedMenu, setExpandedMenu }: Props) => {
           </ListItemButton>
 
           {menu.items && (
-            <Collapse in={isExpanded && isPin} timeout={'auto'} unmountOnExit>
+            <Collapse in={isExpanded} timeout={'auto'} unmountOnExit>
               <List component={'div'} sx={{ p: 0 }}>
                 {menu.items.map(subMenu =>
                   subMenu.items ? (

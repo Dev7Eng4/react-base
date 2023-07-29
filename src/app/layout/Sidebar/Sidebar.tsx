@@ -61,6 +61,7 @@ const Sidebar = () => {
         sx: {
           width: pinMenu ? DRAWER_MAX_WIDTH : DRAWER_MIN_WIDTH,
           transition: 'all 0.5s',
+          position: 'relative',
 
           '.MuiListItemText-root': {
             display: pinMenu ? 'block' : 'none',
@@ -74,6 +75,24 @@ const Sidebar = () => {
 
           '.MuiCollapse-root': {
             display: pinMenu ? 'block' : 'hidden',
+          },
+
+          '&:hover': {
+            width: DRAWER_MAX_WIDTH,
+
+            '.MuiListItemText-root': {
+              display: 'block',
+            },
+
+            '.MuiListItemButton-root': {
+              '.MuiSvgIcon-root': {
+                display: 'block',
+              },
+            },
+
+            '.MuiCollapse-root': {
+              display: 'block',
+            },
           },
         },
       }}

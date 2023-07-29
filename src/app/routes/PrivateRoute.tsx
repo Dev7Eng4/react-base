@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { Skeleton } from '@mui/material';
 import Loadable from 'react-loadable';
 
@@ -23,7 +23,8 @@ const PrivateRoute = () => {
   return (
     <Layout>
       {/* <CircularStatic /> */}
-      <HomePage />
+      {/* <HomePage /> */}
+      <Outlet />
     </Layout>
   );
 };

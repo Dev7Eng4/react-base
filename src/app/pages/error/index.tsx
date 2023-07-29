@@ -13,7 +13,7 @@ type ErrorHandler = (error: Error, info: React.ErrorInfo) => void;
 type ErrorState = { error?: Error };
 
 const ErrorBoundary = ({ children, errorHandler }: Props) => {
-  return class extends React.Component<Props, ErrorState> {
+  class Err extends React.Component<Props, ErrorState> {
     state: ErrorState = {
       error: undefined,
     };
@@ -41,7 +41,9 @@ const ErrorBoundary = ({ children, errorHandler }: Props) => {
 
       return <Fragment>{children}</Fragment>;
     }
-  };
+  }
+
+  return <Err>{children}</Err>;
 };
 
 export default ErrorBoundary;

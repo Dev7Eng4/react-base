@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Box, Stack } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 import Header from './Header';
 import Navbar from './Navbar';
@@ -9,6 +10,10 @@ import Sidebar from './Sidebar/Sidebar';
 interface Props {
   children: React.ReactNode;
 }
+
+const MainContainer = styled('main')({
+  padding: '15px',
+});
 
 const Layout = ({ children }: Props) => {
   return (
@@ -19,7 +24,7 @@ const Layout = ({ children }: Props) => {
       <Stack flexGrow={1}>
         <Header />
 
-        <main>{children}</main>
+        <MainContainer>{children}</MainContainer>
       </Stack>
     </Stack>
   );

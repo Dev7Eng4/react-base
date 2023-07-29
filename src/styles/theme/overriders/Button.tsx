@@ -17,7 +17,7 @@ export default function Button(theme: Theme) {
         },
 
         sizeMedium: {
-          height: '40px',
+          height: '37px',
         },
       },
     },

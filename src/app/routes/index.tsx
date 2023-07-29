@@ -8,6 +8,7 @@ import Home from 'app/pages/codewithme/home';
 import Notification from 'app/pages/codewithme/notification';
 
 import Products from 'app/pages/fashionwithlove/products';
+import ListUser from 'app/pages/codewithme/users';
 
 import ProductDetail from 'app/pages/fashionwithlove/product-detail';
 import { http } from 'service/axios-config';
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
           {
             path: 'home',
             element: <Home />,
+          },
+          {
+            path: 'users',
+            element: <ListUser />,
           },
           {
             path: 'notification',

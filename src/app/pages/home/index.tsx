@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 
 import { Box } from '@mui/material';
+import { Outlet } from 'react-router-dom';
 
 const Home = () => {
   const containerScrollRef = useRef<HTMLDivElement>(null);
@@ -51,71 +52,7 @@ const Home = () => {
         }}
       />
 
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
-      <p>AAAA</p>
+      <Outlet />
       <p>AAAA</p>
     </Box>
   );

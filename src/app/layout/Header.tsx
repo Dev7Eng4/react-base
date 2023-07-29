@@ -12,8 +12,8 @@ const Header = () => {
     <Stack direction="row" p={2} gap={2}>
       <Space />
       <ThemeMode />
-      <LanguagePopover />
-      <AccountPopover />
+      {/* <LanguagePopover />
+      <AccountPopover /> */}
     </Stack>
   );
 };
