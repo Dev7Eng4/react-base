@@ -35,7 +35,7 @@ const AccountPopover = () => {
     <>
       <Avatar
         onClick={onPopoverOpen}
-        onMouseEnter={onPopoverOpen}
+        // onMouseEnter={onPopoverOpen}
         // onMouseLeave={onPopoverClose}
         alt="Avatar"
         src={user.avatar}

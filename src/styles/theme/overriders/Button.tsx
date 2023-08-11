@@ -1,4 +1,4 @@
-import { ButtonPropsVariantOverrides, Theme } from '@mui/material';
+import { ButtonPropsVariantOverrides, Components, Theme } from '@mui/material';
 import { OverridableStringUnion } from '@mui/types';
 
 export default function Button(theme: Theme) {
@@ -17,7 +17,8 @@ export default function Button(theme: Theme) {
         },
 
         sizeMedium: {
-          height: '37px',
+          height: '40px',
+          minWidth: '70px',
         },
       },
     },

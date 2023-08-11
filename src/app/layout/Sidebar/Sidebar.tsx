@@ -16,25 +16,25 @@ import { ExpandLess, ExpandMore, StarBorder, MoveToInbox } from '@mui/icons-mate
 import PinCycle from 'app/components/atoms/PinCycle';
 import Logo from 'app/components/atoms/Logo';
 import Scroll from 'app/components/atoms/Scroll';
+import { SIDEBAR_DRAWER_MAX_WIDTH, SIDEBAR_DRAWER_MIN_WIDTH } from 'constant';
+import { IFunc } from 'types/common.type';
 
-import { sidebarMenus } from './sidebar.data';
 import SidebarMenu from './SidebarMenu';
+import { sidebarMenus } from './sidebar.data';
 
-const DRAWER_MAX_WIDTH = 300;
-const DRAWER_MIN_WIDTH = 200;
+interface Props {
+  isPin: boolean;
+  // togglePin: React.Dispatch<React.SetStateAction<boolean>>;
+  togglePin: IFunc;
+}
 
-const Sidebar = () => {
+const Sidebar = ({ isPin, togglePin }: Props) => {
   const theme = useTheme();
 
   const [expandedMenu, setExpandedMenu] = useState('');
-  const [pinMenu, setPinMenu] = useState(true);
 
   const handleMenuClick = (id: string) => () => {
     setExpandedMenu(prev => (prev === id ? '' : id));
-  };
-
-  const handleToggleMenu = () => {
-    setPinMenu(prev => !prev);
   };
 
   //   <NavLink
@@ -59,26 +59,26 @@ const Sidebar = () => {
       variant="persistent"
       PaperProps={{
         sx: {
-          width: pinMenu ? DRAWER_MAX_WIDTH : DRAWER_MIN_WIDTH,
+          width: isPin ? SIDEBAR_DRAWER_MAX_WIDTH : SIDEBAR_DRAWER_MIN_WIDTH,
           transition: 'all 0.5s',
-          position: 'relative',
+          position: 'fixed',
 
           '.MuiListItemText-root': {
-            display: pinMenu ? 'block' : 'none',
+            display: isPin ? 'block' : 'none',
           },
 
           '.MuiListItemButton-root': {
             '.MuiSvgIcon-root': {
-              display: pinMenu ? 'block' : 'none',
+              display: isPin ? 'block' : 'none',
             },
           },
 
           '.MuiCollapse-root': {
-            display: pinMenu ? 'block' : 'hidden',
+            display: isPin ? 'block' : 'none',
           },
 
           '&:hover': {
-            width: DRAWER_MAX_WIDTH,
+            width: SIDEBAR_DRAWER_MAX_WIDTH,
 
             '.MuiListItemText-root': {
               display: 'block',
@@ -103,6 +103,7 @@ const Sidebar = () => {
           p: 0,
           height: '100vh',
           overflowY: 'auto',
+          overflowX: 'hidden',
           bgcolor: theme.palette.primary.main,
         }}
       >
@@ -118,7 +119,7 @@ const Sidebar = () => {
         >
           <Logo />
 
-          <PinCycle isPin={pinMenu} onToggle={handleToggleMenu} />
+          <PinCycle isPin={isPin} onToggle={togglePin} />
         </Stack>
 
         <Scroll
@@ -133,7 +134,7 @@ const Sidebar = () => {
               menu={menu}
               expandedMenu={expandedMenu}
               setExpandedMenu={setExpandedMenu}
-              isPin={pinMenu}
+              isPin={isPin}
             />
           ))}
         </Scroll>

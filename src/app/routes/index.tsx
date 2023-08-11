@@ -41,47 +41,47 @@ const router = createBrowserRouter([
     //       }),
     //   },
   },
-  {
-    path: '/',
-    element: <PrivateRoute />,
-    children: [
-      {
-        path: 'codewithme',
-        children: [
-          {
-            path: 'home',
-            element: <Home />,
-          },
-          {
-            path: 'users',
-            element: <ListUser />,
-          },
-          {
-            path: 'notification',
-            element: <Notification />,
-          },
-        ],
-      },
-      {
-        path: 'fashionwithlove',
-        children: [
-          {
-            path: 'products',
-            element: <Products />,
-          },
-          {
-            path: 'products/:productId',
-            element: <ProductDetail />,
-            loader: async ({ params }) => {
-              const product = await http.get(`/products/${params.productId}`);
+  // {
+  //   path: '/',
+  //   element: <PrivateRoute />,
+  //   children: [
+  //     {
+  //       path: 'codewithme',
+  //       children: [
+  //         {
+  //           path: 'home',
+  //           element: <Home />,
+  //         },
+  //         {
+  //           path: 'users',
+  //           element: <ListUser />,
+  //         },
+  //         {
+  //           path: 'notification',
+  //           element: <Notification />,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       path: 'fashionwithlove',
+  //       children: [
+  //         {
+  //           path: 'products',
+  //           element: <Products />,
+  //         },
+  //         {
+  //           path: 'products/:productId',
+  //           element: <ProductDetail />,
+  //           loader: async ({ params }) => {
+  //             const product = await http.get(`/products/${params.productId}`);
 
-              return defer({ product });
-            },
-          },
-        ],
-      },
-    ],
-  },
+  //             return defer({ product });
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ]);
 
 const AppRoutes = () => {

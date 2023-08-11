@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-import { Box } from '@mui/material';
+import { Box, Icon, IconButton } from '@mui/material';
+
+import { ReactComponent as Test } from 'assets/icons/date.svg';
 
 const ThemeMode = () => {
   const [mode, setMode] = useState('light');
@@ -11,7 +13,13 @@ const ThemeMode = () => {
 
   return (
     <Box component="span" onClick={onToggleTheme}>
-      {mode === 'light' ? 'Light' : 'Dark'}
+      {mode === 'light' ? (
+        <IconButton>
+          <Test />
+        </IconButton>
+      ) : (
+        'Dark'
+      )}
     </Box>
   );
 };

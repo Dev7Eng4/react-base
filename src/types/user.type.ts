@@ -18,13 +18,13 @@ interface ICompany {
 }
 
 export interface IUser {
-  id: number;
-  name: string;
+  id: string;
+  fullName: string;
   username: string;
   email: string;
-  avatar?: string;
-  address: IAddress;
-  phone: string;
-  website: string;
-  company: ICompany;
+  // avatar?: string;
+  // address?: IAddress;
+  phoneNumber: string;
+  // website?: string;
+  // company?: ICompany;
 }

@@ -7,11 +7,14 @@ export default function GlobalStyles() {
         '*': {
           margin: 0,
           padding: 0,
-          boxSizing: 'border-box',
+          boxSizing: 'border-box !important',
           fontSize: '14px',
         },
         html: {},
-        body: {},
+        body: {
+          fontFamily: "'Public Sans', Roboto, sans-serif",
+          fontWeight: 400,
+        },
         img: {
           display: 'block',
           maxWidth: '100%',

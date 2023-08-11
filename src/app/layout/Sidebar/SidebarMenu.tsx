@@ -33,8 +33,8 @@ const SidebarItem = ({ item }: { item: IMenu }) => {
       to={path}
       sx={{
         display: 'flex',
-        mr: '5px',
-        ml: icon ? '5px' : '20px',
+        mr: '13px',
+        ml: icon ? '13px' : '20px',
         borderRadius: theme.shape,
         color: theme.palette.grey[300],
         '&:hover': {
@@ -84,7 +84,7 @@ const SidebarMenu = ({ menu, isPin, expandedMenu, setExpandedMenu }: Props) => {
         <>
           <ListItemButton
             sx={{
-              mx: '5px',
+              mx: '13px',
               height: '40px',
               borderRadius: theme.shape,
               color: theme.palette.grey[300],

@@ -25,7 +25,7 @@ function responsiveFontSizes({ sm, md, lg }: ResponsiveFontSizeProps) {
   };
 }
 
-const FONT_PRIMARY = 'Roboto, sans-serif';
+const FONT_PRIMARY = "'Public Sans', Roboto, sans-serif";
 
 const typography: TypographyOptions = {
   fontFamily: FONT_PRIMARY,
@@ -99,7 +99,7 @@ const typography: TypographyOptions = {
   },
   button: {
     fontWeight: 500,
-    lineHeight: 'initial',
+    // lineHeight: 'initial',
     fontSize: pxToRem(16),
     textTransform: 'capitalize',
   },
